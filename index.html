@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpAEUKebjlSz7LPETr_Uf_4-0g1biR3rw&libraries=places&callback=initAutocomplete" async defer></script> -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDpAEUKebjlSz7LPETr_Uf_4-0g1biR3rw&libraries=places&callback=initAutocomplete"></script>
+
+
+<script type="text/javascript">
+	   var geocoder = new google.maps.Geocoder();
+	   var address = "new york";
+
+	   geocoder.geocode( { 'address': address}, function(results, status) {
+            var latitude = results[0].geometry.location.lat();
+            var longitude = results[0].geometry.location.lng();
+
+	       console.log(latitude);
+	       console.log(longitude);
+	   //if (status == google.maps.GeocoderStatus.OK) {
+	     //  var latitude = results[0].geometry.location.latitude;
+	       //var longitude = results[0].geometry.location.longitude;
+	    //   } 
+	   });
+
+
+</script>
+
+<!-- https://maps.googleapis.com/maps/api/geocode/xml?address=1600+Amphitheatre+Parkway,
++Mountain+View,+CA&key=AIzaSyDpAEUKebjlSz7LPETr_Uf_4-0g1biR3rw&libraries=places&callback=initAutocomplete -->
+</body>
+</html>
